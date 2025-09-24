@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Developer – Heart Disease Detection{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center text-primary mb-5">Meet the Developer</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="developer-card position-relative overflow-hidden rounded-4 shadow-lg p-5 text-center">
+
+        <!-- Decorative gradient shape -->
+        <div class="gradient-shape position-absolute"></div>
+
+        <!-- Profile Image -->
+        <div class="profile-wrapper mb-4">
+          <img src="{{ url_for('static', filename='images/Shreya.jpeg') }}" 
+               alt="Bhagyashree Mohalkar" 
+               class="profile-img shadow-lg">
+        </div>
+
+        <!-- Developer Info -->
+        <h2 class="fw-bold mb-1">Bhagyashree Mohalkar</h2>
+        <h5 class="text-primary mb-3">Digital Healthcare Innovator</h5>
+        <p class="text-muted mb-4">
+           <strong>Electronics and Computer Engineering Student</strong> 
+        </p>
+
+        <!-- Skills -->
+        <div class="skills mb-4">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">C++</span>
+          <span class="skill-badge">Artificial Intelligence</span>
+          <span class="skill-badge">Machine Learning</span>
+          <span class="skill-badge">Data Science</span>
+          <span class="skill-badge">IoT Development</span>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://github.com/BhagyashreeMohalkar" target="_blank" class="social-btn github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bhagyashree-mohalkar-1b6861287/" target="_blank" class="social-btn linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:mohalkarbhagyashri961@gmail.com" class="social-btn email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

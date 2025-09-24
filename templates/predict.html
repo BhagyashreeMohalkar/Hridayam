@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease Prediction - Check Your Health{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="text-center mb-5">Heart Disease Risk Assessment</h1>
+            
+            <div class="card shadow-lg">
+                <div class="card-body p-4">
+                    <form id="predictionForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="age" class="form-label">Age</label>
+                                <input type="range" class="form-range" id="age" name="age" min="20" max="100" value="50">
+                                <div class="d-flex justify-content-between">
+                                    <span>20</span>
+                                    <span id="ageValue">50</span>
+                                    <span>100</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="sex" class="form-label">Sex</label>
+                                <select class="form-select" id="sex" name="sex">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="cp" class="form-label">Chest Pain Type</label>
+                                <select class="form-select" id="cp" name="cp">
+                                    <option value="typical angina">Typical Angina</option>
+                                    <option value="atypical angina">Atypical Angina</option>
+                                    <option value="non-anginal">Non-Anginal</option>
+                                    <option value="asymptomatic">Asymptomatic</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="trestbps" class="form-label">Resting Blood Pressure (mm Hg)</label>
+                                <input type="range" class="form-range" id="trestbps" name="trestbps" min="80" max="200" value="120">
+                                <div class="d-flex justify-content-between">
+                                    <span>80</span>
+                                    <span id="trestbpsValue">120</span>
+                                    <span>200</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="chol" class="form-label">Serum Cholesterol (mg/dl)</label>
+                                <input type="range" class="form-range" id="chol" name="chol" min="100" max="600" value="200">
+                                <div class="d-flex justify-content-between">
+                                    <span>100</span>
+                                    <span id="cholValue">200</span>
+                                    <span>600</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="fbs" class="form-label">Fasting Blood Sugar > 120 mg/dl</label>
+                                <select class="form-select" id="fbs" name="fbs">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="restecg" class="form-label">Resting ECG</label>
+                                <select class="form-select" id="restecg" name="restecg">
+                                    <option value="normal">Normal</option>
+                                    <option value="lv hypertrophy">LV Hypertrophy</option>
+                                    <option value="st-t abnormality">ST-T Abnormality</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="thalch" class="form-label">Max Heart Rate Achieved</label>
+                                <input type="range" class="form-range" id="thalch" name="thalch" min="60" max="220" value="150">
+                                <div class="d-flex justify-content-between">
+                                    <span>60</span>
+                                    <span id="thalchValue">150</span>
+                                    <span>220</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="exang" class="form-label">Exercise Induced Angina</label>
+                                <select class="form-select" id="exang" name="exang">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="oldpeak" class="form-label">Oldpeak (ST Depression)</label>
+                                <input type="range" class="form-range" id="oldpeak" name="oldpeak" min="0" max="6" step="0.1" value="1.0">
+                                <div class="d-flex justify-content-between">
+                                    <span>0.0</span>
+                                    <span id="oldpeakValue">1.0</span>
+                                    <span>6.0</span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="slope" class="form-label">Slope of ST Segment</label>
+                                <select class="form-select" id="slope" name="slope">
+                                    <option value="upsloping">Upsloping</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="downsloping">Downsloping</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="ca" class="form-label">Number of Major Vessels Colored (0–3)</label>
+                                <select class="form-select" id="ca" name="ca">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="thal" class="form-label">Thalassemia</label>
+                                <select class="form-select" id="thal" name="thal">
+                                    <option value="normal">Normal</option>
+                                    <option value="fixed defect">Fixed Defect</option>
+                                    <option value="reversable defect">Reversable Defect</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-heartbeat me-2"></i>Predict Risk
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div id="result" class="mt-4" style="display: none;">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h4 id="resultTitle"></h4>
+                                <p id="resultText"></p>
+                                <div id="riskMeter" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

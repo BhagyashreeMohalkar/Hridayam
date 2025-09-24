@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease Detection - AI-Powered Health Screening{% endblock %}
+
+{% block content %}
+<!-- Background Decorative Elements -->
+<div class="bg-decorations">
+    <div class="wave-shape wave-1"></div>
+    <div class="wave-shape wave-2"></div>
+    <div class="geometric-circle circle-1"></div>
+    <div class="geometric-circle circle-2"></div>
+    <div class="geometric-triangle triangle-1"></div>
+</div>
+
+<!-- Modern Header Section -->
+<div class="modern-hero-section">
+    <div class="container">
+        <div class="header-content">
+            <h1 class="hero-title">Hridayam AI-Powered Heart Disease Detection</h1>
+            <p class="hero-tagline">Advanced AI technology for early heart disease detection and prevention</p>
+        </div>
+    </div>
+</div>
+
+<!-- Call-to-Action Section -->
+<div class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <a href="{{ url_for('predict_form') }}" class="modern-cta-button">
+                <i class="fas fa-heartbeat me-2"></i>Check Your Heart Health
+            </a>
+            <p class="cta-subtitle">Get instant, secure analysis in under 2 minutes</p>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4 class="feature-title">AI-Powered Analysis</h4>
+                    <p class="feature-description">Advanced machine learning algorithms analyze multiple health parameters for accurate predictions.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="feature-title">Secure & Private</h4>
+                    <p class="feature-description">Your health data is processed securely and never stored or shared with third parties.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4 class="feature-title">Instant Results</h4>
+                    <p class="feature-description">Get immediate risk assessment results with detailed explanations and recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Health Blog - Heart Disease Detection{% endblock %}
+
+{% block content %}
+
+<!-- Floating Decorative Shapes -->
+<div class="bg-decorations">
+    <div class="wave-shape wave-1"></div>
+    <div class="wave-shape wave-2"></div>
+    <div class="geometric-circle circle-1"></div>
+    <div class="geometric-circle circle-2"></div>
+    <div class="geometric-triangle triangle-1"></div>
+</div>
+
+<div class="container py-5">
+    <h1 class="text-center mb-5 text-primary">Heart Health Insights & Blog</h1>
+
+    <div class="row g-4">
+        <!-- Blog Post 1 -->
+        <div class="col-md-4">
+            <a href="https://hearthealthindia.org/breathing-life-into-recovery-a-structured-summary-of-the-dil-ke-doubts-session-on-heart-lung-connection-in-bypass-recovery-with-dr-poorvi-devani/" target="_blank" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-lg border-0 blog-card">
+                    <img src="{{ url_for('static', filename='images/Blog 1.jpg') }}" class="card-img-top" alt="Bypass Recovery and Heart-Lung Connection">
+                    <div class="card-body">
+                        <h5 class="card-title">Breathing Life into Recovery</h5>
+                        <p class="card-text">
+                            A structured summary of the “Dil ke Doubts” session with Dr. Poorvi Devani, discussing heart-lung connections during bypass recovery and strategies for faster, safer rehabilitation.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="col-md-4">
+            <a href="https://txhospitals.in/heart-failure-awareness-week-2025-a-call-to-action-for-a-healthier-heart/" target="_blank" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-lg border-0 blog-card">
+                    <img src="{{ url_for('static', filename='images/Blog 2.jpg') }}" class="card-img-top" alt="Heart Failure Awareness Week">
+                    <div class="card-body">
+                        <h5 class="card-title">Heart Failure Awareness Week 2025</h5>
+                        <p class="card-text">
+                            Highlights from Heart Failure Awareness Week, emphasizing early detection, preventive measures, and the importance of heart-healthy habits for a stronger cardiovascular system.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="col-md-4">
+            <a href="https://clearmedi.in/blog/heart-health-in-2025-what-s-causing-the-rise-in-heart-disease-and-how-you-can-stay-healthy" target="_blank" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-lg border-0 blog-card">
+                    <img src="{{ url_for('static', filename='images/Blog 3.jpg') }}" class="card-img-top" alt="Heart Health in 2025">
+                    <div class="card-body">
+                        <h5 class="card-title">Heart Health in 2025</h5>
+                        <p class="card-text">
+                            Discusses the rise in heart disease and the factors contributing to it, along with actionable tips on lifestyle, diet, and preventive measures to maintain heart health.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Call-to-Action -->
+    <div class="text-center mt-5">
+        <a href="/" class="modern-cta-button">Back to Home</a>
+    </div>
+</div>
+
+{% endblock %}

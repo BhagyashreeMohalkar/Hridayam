@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Heart Disease Detection{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="mb-4">Get in Touch</h1>
+            <p class="lead">Have questions about our heart disease detection system? We'd love to hear from you.</p>
+            
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="ms-lg-4">
+                <h3>Contact Information</h3>
+                <div class="mb-3">
+                    <i class="fas fa-envelope text-primary me-2"></i>
+                    <span>mohalkarbhagyashri961@gmail.com</span>
+                </div>
+                <div class="mb-3">
+                    <i class="fas fa-phone text-primary me-2"></i>
+                    <span>+91 7620216120</span>
+                </div>
+                <div class="mb-3">
+                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                    <span>Maharashtra, India</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
