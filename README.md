@@ -102,13 +102,13 @@ Here’s a visual walkthrough of **Hridayam**:
 - ℹ️ **About Page**  
 <img src="Screenshots/About.png" alt="About Page" width="600"/>
 
-- 📰 **Blog / Insights Page**  
+- 📰 **Blog Page**  
 <img src="Screenshots/Blog%20page.png" alt="Blog Page" width="600"/>
 
 - 📩 **Contact Page**  
 <img src="Screenshots/contact%20page.png" alt="Contact Page" width="600"/>
 
-- 👩‍💻 **Developer / Team Page**  
+- 👩‍💻 **Developer Page**  
 <img src="Screenshots/Developer%20page.png" alt="Developer Page" width="600"/>
 
 ---
