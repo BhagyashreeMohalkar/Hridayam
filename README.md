@@ -121,7 +121,7 @@ Here’s a visual walkthrough of **Hridayam**:
 
 ## 👩‍💻 Authors
 
-**Bhagyashree Savata Mohalkar** — ✨ Lead Developer  
+**Bhagyashree Mohalkar** — ✨ Lead Developer  
 
 💬 *“Health is not valued until sickness comes.”* – Thomas Fuller  
 
